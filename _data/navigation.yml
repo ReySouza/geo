@@ -1,22 +1,22 @@
 # main links links
 main:
-  - title: "Publications"
-    url: /articles/
+  - title: "Publicações"
+    url: /artigos/
 
-  - title: "Talks"
-    url: /talks/    
+  - title: "Atividades de Campo"
+    url: /campos/    
     
-  - title: "Expressions"
-    url: /expressions/
+  - title: "Pesquisa"
+    url: /pesquisa/
 
-  - title: "Teaching"
-    url: /teaching/
+  - title: "PAD"
+    url: /pad/
         
-  - title: "Blog Posts"
-    url: /year-archive/
+  - title: "Blog"
+    url: /blog/
     
   - title: "CV"
     url: /cv/
   
-  - title: "Contact"
-    url: /contact/
+  - title: "Contato"
+    url: /contato/
