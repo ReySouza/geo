@@ -5,44 +5,29 @@ collection: expressions
 permalink: /expressions/montecarlo/ 
 ---
 
-Este projeto foi desenvolvido com apoio e financiamento do [Serviço de Apoio ao Estudante](https://www.sae.unicamp.br/portal/pt/) como parte do programa de Bolsas de Auxílio Social (BAS). Ele foi desenvolvido pelo [Departamento de Raios Cósmicos e Cronologia](https://sites.ifi.unicamp.br/drcc/) do [Instituto de Física "Gleb Wataghin"](https://portal.ifi.unicamp.br) e foi ministrado pela [Profa. Dr. Carola Dobrigkeit Chinellato](http://lattes.cnpq.br/0301569503177054
-).
+Este projeto foi desenvolvido com apoio e financiamento do [Serviço de Apoio ao Estudante](https://www.sae.unicamp.br/portal/pt/) como parte do programa de Bolsas de Auxílio Social (BAS). Ele foi desenvolvido pelo [Departamento de Raios Cósmicos e Cronologia](https://sites.ifi.unicamp.br/drcc/) do [Instituto de Física "Gleb Wataghin"](https://portal.ifi.unicamp.br) e foi ministrado pela [Profa. Dr. Carola Dobrigkeit Chinellato](http://lattes.cnpq.br/0301569503177054). 
+Os dados utilizados para o projeto estão disponiveis ao público pelo [Observatório Pierre Auger](https://www.auger.org) na Argentina
 
 Este projeto busca o aprimoramento técnico na área das ciências exatas e da natureza, ele visa proporcionar uma introdução ao método de Monte Carlo e a simulação computacional de fenômenos físicos utilizando os Raios Cósmicos como um plano de fundo.
+
+# Raios Cósmicos
+
+Os Raios Cósmicos são partículas elementares produzidas em eventos astronômicos massivos que podem atingir energias na ordem de $10^{21}$ eV, em sua grande maioria, são núcleos atômicos de elementos abundantes no universo com sua camada eletrônica removida, e que são então acelerados a velocidades próximas da luz para vagarem pelo espaço. Ao acertar a atmosfera terrestre e interagir com as moléculas de gás, os raios cósmicos produzem chuveiros atmosféricos extensos contendo diversas partículas secundárias com tempo de meia-vida mais curto como pions, muons e neutrinos.
+
+A descoberta dos Raios cósmicos foi um trabalho coletivo entre diversos cientistas ao longo de mais de 40 anos como Theodor Wulf (1868-1946), Victor Hess (1883-1964), Robert Andrews Millikan (1868-1953) e por fim Pierre Auger (1899-1993). Este homens inicialmente estavam interessados em resolver um problema que confundia os físicos desde a descoberta da radioatividade por Marie Curie (1867-1934) em 1903, que era a presença de partículas ionizantes na atmosfera.
+
+As viagens de balão de Hess foram essenciais na determinação da origem destas partículas. Hess chegou até 5.3km e então percebeu que a radiação ionizante ficava extremamente baixa até próximo de 1km onde voltava a aumentar, ele repetiu estas viagens diversas vezes, de dia e de noite e até mesmo durante um eclipse solar para confirmar que a origem da radiação era extraterrestre.
+
+Em 1939, Serge Korff (1906-1989) determinou que os raios cósmicos poderiam gerar neutrons na atmosfera, estes nêutrons poderiam interagir com o gás nitrogênio a partir da reação. O produto desta reação é um isótopo radioativo do carbono com 6 protons e 8 neutrons, o carbono-14
+
+ ```math
+ _{}^{1}\textrm{n} + _{}^{14}\textrm{N} \rightarrow _{}^{14}\textrm{C} +_{}^{1}\textrm{p}
+ ```
+ 
+O carbono-14 pode formar gás carbônico normalmente, desta forma, ele pode participar do ciclo do carbono e estar presente no organismo de plantas e animais que o absorverem. Desta forma, a produção cósmica de carbono-14 é muito util dentro da geocronologia do quaternário pois permite que seres vivos que tenha vivido a pelo menos 50.000 podem ter sua idade determinada com alto grau de precisão
 
 ## Método de Monte Carlo
 
 O método de Monte Carlo constitui uma série de métodos computacionais utilizados em simulações de larga escala que recorrem a amostragens aleatórias. Podemos resumir o método como uma forma de atingir resultados numéricos para problemas que são, pelo menos em princípio, determínisticos, por meio de variáveis pseudorrandômicas, isto é, que são gerados por um algorítmo computacional a partir de uma seed específica
 
-Este método é particularmente util para fenômenos físicos que são descritos por muitas variáveis e são sujeitos a muitas incertezas experimentais.
-
-Uma forma interessante de visualizar o método de Monte Carlo pode vir pelo problema da agulha de Buffon, um problema matemático proposto por Georges-Louis Leclerc no século 18. O problema é o seguinte:
-"Supondo que o chão seja feito de diversas tábuas de madeira paralelas e equidistantes, supondo que a distância entre as tábuas seja t, ao arremessarmos uma agulha de comprimento l < t no chão. Qual é a probabilidade de que ela atravesse uma tábua"
-
-A orientação da agulha é descrita pelas coordenadas cartesianas de seu centro e o ângulo em que forma com o seu eixo vertical. A coordenada vertical, y não irá influenciar a movimentação da agulha então iremos considerar o problema como sendo unidirecional. Podemos definir então que uma agulha arremessada ao acaso só irá suprir nossas condições se sua coordenada x estiver no intervalo
-
-```math
-(0\leq x\leq l)
-```
-Podemos considerar que a agulha apresenta simetria rotacional e considerar que seu angulo precisa estar no intervalo
-
-```math
-(0\leq \theta \leq \pi )
-```
-
-A agulha irá intersectar uma linha apenas se parte dela intersectar x=0 ou x=l então podemos considerar a projeção da agulha no eixo x e verificar se este valor, somado ou subtraido com a coordenada x do centro de agulha intersecta as tábuas
-
-```math
-x + \frac{l}{2}\sin \theta \geq l \, \, \, \, \, \, ou\, \, \, \, \, \, x - \frac{l}{2}\sin \theta \geq 0
-```
-Utilizando esta expressão, podemos obter um gráfico com a área compreendida pelas desigualdades
-
-
-As variáveis pseudorrandômicas são então avaliadas utilizando uma função densidade de probabilidade, essa função é então normalizada de forma que x assuma um valor entre o intervalo x e x + dx, consideramos que exista a possibilidade da variável pertencer ao intervalo de uma reta entre $(-\infty,x]$, assim temos um função de distribuição acumulada, denotada por Fx
-
-```math
-F_{x}(x) = P(X\leq x) =\int_{-\infty }^{x}f(x)u\, du
-```
-
-A partir desta definição, sorteamos as variáveis aleatórias a partir das diversas distribuições de um função densidade de probabilidade e plotamos os resultados obtidos.
-
+Este método é particularmente util para fenômenos físicos que são descritos por muitas variáveis e são sujeitos a muitas incertezas experimentais como é o caso daqueles encontrados nas ciências da natureza, incluindo a geociências
