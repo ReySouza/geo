@@ -20,9 +20,7 @@ As viagens de balão de Hess foram essenciais na determinação da origem destas
 
 Em 1939, Serge Korff (1906-1989) determinou que os raios cósmicos poderiam gerar neutrons na atmosfera, estes nêutrons poderiam interagir com o gás nitrogênio a partir da reação. O produto desta reação é um isótopo radioativo do carbono com 6 protons e 8 neutrons, o carbono-14
 
- $$
- _{}^{1}\textrm{n} + _{}^{14}\textrm{N} \rightarrow _{}^{14}\textrm{C} +_{}^{1}\textrm{p}
- $$
+ $$_{}^{1}\textrm{n} + _{}^{14}\textrm{N} \rightarrow _{}^{14}\textrm{C} +_{}^{1}\textrm{p}$$
  
 O carbono-14 pode formar gás carbônico normalmente, desta forma, ele pode participar do ciclo do carbono e estar presente no organismo de plantas e animais que o absorverem. Desta forma, a produção cósmica de carbono-14 é muito util dentro da geocronologia do quaternário pois permite que seres vivos que tenha vivido a pelo menos 50.000 podem ter sua idade determinada com alto grau de precisão
 
