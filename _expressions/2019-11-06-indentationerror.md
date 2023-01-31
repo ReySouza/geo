@@ -18,5 +18,5 @@ Este método é particularmente util para fenômenos físicos que são descritos
 
 As variáveis pseudorrandômicas são então avaliadas utilizando uma função densidade de probabilidade, essa função é definida de forma que
 
-$$F_{x}(x) = P(X\leq x) =\int_{-\infty }^{x}f(x)u\, du
+$$F_{x}(x) = P(X\leq x) =\int_{-\infty }^{x}f(x)u\, du$$
 
