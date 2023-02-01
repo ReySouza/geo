@@ -10,7 +10,7 @@ Os dados utilizados para o projeto estão disponiveis ao público pelo [Observat
 
 Este projeto busca o aprimoramento técnico na área das ciências exatas e da natureza, ele visa proporcionar uma introdução ao método de Monte Carlo e a simulação computacional de fenômenos físicos utilizando os Raios Cósmicos como um plano de fundo.
 
-Um relatório produzido para este projeto estará disponível no [link](https://github.com/ReySouza/geo/blob/842cc75e26466031d51e34f79dfc539c53c7a2c2/Relat%C3%B3rio%201.pdf) a seguir
+Um relatório produzido para este projeto estará disponível no [link](Relatório 1.pdf) a seguir
 
 # Raios Cósmicos
 
