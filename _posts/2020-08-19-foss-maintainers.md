@@ -1,7 +1,7 @@
 ---
 title: Como podemos utilizar o método de Monte Carlo para determinar o valor de Pi
 published: 2023-02-01
-excerpt: "Como os estatísticos irão salvar a matemática"
+excerpt: "Como os estatísticos irão salvar o mundo"
 permalink: /posts/2020/08/strawberrypi/ 
 ---
 
