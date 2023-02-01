@@ -51,4 +51,4 @@ $$P(x) = \frac{L}{D\pi }$$
 
 Um aspecto interessante desta solução é que se considerassemos que a agulha é exatamente metade do comprimento das tábuas, a probabilidade seria o inverso de pi
 
-
+$$P(x) = \frac{2}{\pi }\frac{\frac{D}{2}}{D}=\frac{1}{\pi }$$
