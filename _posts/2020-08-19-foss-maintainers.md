@@ -39,4 +39,12 @@ Podemos plotar essa expressão de forma que as diferentes possibilidades sejam r
 
 A área total de nosso universo, ou seja, a soma das probabilidades de todas as possíveis configurações da agulha é dada pela integral dupla delimitada pelas variáveis de estado.
 
+$$\int_{0}^{\pi}\int_{0}^{D}dxd\theta  =D\pi$$
+
+A área do gráfico para que x - φ < 0 é dada por
+
+$$\int_{0}^{\pi }\left ( \phi  \right )d\theta =\int_{0}^{\pi }\left ( \frac{L\sin \theta }{2} \right )d\theta =L$$
+
+Podemos ver intuitivamente pelo gráfico que a probabilidade para x + φ > D será igual a L pelo efeito de simetria, então, podemos finalmente calcular a probabilidade de que a agulha cruze o vão entre as tábuas de madeira.
+
 
