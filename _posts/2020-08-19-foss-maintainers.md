@@ -28,6 +28,7 @@ $$0\leq \theta \leq \pi $$
 Precisamos apenas que a ponta da agulha toque o vão entre as tábuas para contar, então, respeitando as condições impostas acima, a distância que a ponta da agulha está de seu centro considerando um ângulo qualquer é dado por
 
 $$\cos \theta  = \frac{\phi }{\frac{L}{2}}$$
+
 $$\phi =\frac{L\cos \theta }{2}$$
 
 Podemos atualizar nossas variáveis de estado para L(x,φ)
