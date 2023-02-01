@@ -10,9 +10,11 @@ Os dados utilizados para o projeto estão disponiveis ao público pelo [Observat
 
 Este projeto busca o aprimoramento técnico na área das ciências exatas e da natureza, ele visa proporcionar uma introdução ao método de Monte Carlo e a simulação computacional de fenômenos físicos utilizando os Raios Cósmicos como um plano de fundo.
 
+Um relatório produzido para este projeto estará disponível na área de publicações, ou pelo [link](https://reysouza.github.io/geo//articles/2022-05-20-cogsci-community-context-open-source) a seguir
+
 # Raios Cósmicos
 
-Os Raios Cósmicos são partículas elementares produzidas em eventos astronômicos massivos que podem atingir energias na ordem de $$10^{21}$$ eV, em sua grande maioria, são núcleos atômicos de elementos abundantes no universo com sua camada eletrônica removida, e que são então acelerados a velocidades próximas da luz para vagarem pelo espaço. Ao acertar a atmosfera terrestre e interagir com as moléculas de gás, os raios cósmicos produzem chuveiros atmosféricos extensos contendo diversas partículas secundárias com tempo de meia-vida mais curto como pions, muons e neutrinos.
+Os Raios Cósmicos são partículas elementares produzidas em eventos astronômicos massivos que podem atingir energias na ordem de $$10^{21}$$ eV, em sua grande maioria, são núcleos atômicos de elementos abundantes no universo acelerados a velocidades próximas da luz para vagarem pelo espaço. Ao acertar a atmosfera terrestre e interagir com as moléculas de gás, os raios cósmicos produzem chuveiros atmosféricos extensos contendo diversas partículas secundárias com tempo de meia-vida mais curto como pions, muons e neutrinos.
 
 A descoberta dos Raios cósmicos foi um trabalho coletivo entre diversos cientistas ao longo de mais de 40 anos como Theodor Wulf (1868-1946), Victor Hess (1883-1964), Robert Andrews Millikan (1868-1953) e por fim Pierre Auger (1899-1993). Este homens inicialmente estavam interessados em resolver um problema que confundia os físicos desde a descoberta da radioatividade por Marie Curie (1867-1934) em 1903, que era a presença de partículas ionizantes na atmosfera.
 
@@ -22,10 +24,21 @@ Em 1939, Serge Korff (1906-1989) determinou que os raios cósmicos poderiam gera
 
 $$_{0}^{1}\textrm{n} + _{7}^{14}\textrm{N} \rightarrow _{6}^{14}\textrm{C} +_{1}^{1}\textrm{p}$$
  
-O carbono-14 pode formar gás carbônico normalmente, desta forma, ele pode participar do ciclo do carbono e estar presente no organismo de plantas e animais que o absorverem. Desta forma, a produção cósmica de carbono-14 é muito util dentro da geocronologia do quaternário pois permite que seres vivos que tenha vivido a pelo menos 50.000 podem ter sua idade determinada com alto grau de precisão
+O carbono-14 pode formar gás carbônico normalmente, desta forma, ele pode participar do ciclo do carbono e estar presente no organismo de plantas e animais que o absorverem. Desta forma, a produção cósmica de carbono-14 é muito util dentro da geocronologia do quaternário pois permite que seres vivos que tenha vivido a pelo menos 50.000 podem ter sua idade determinada com alto grau de precisão.
 
 ## Método de Monte Carlo
 
-O método de Monte Carlo constitui uma série de métodos computacionais utilizados em simulações de larga escala que recorrem a amostragens aleatórias. Podemos resumir o método como uma forma de atingir resultados numéricos para problemas que são, pelo menos em princípio, determínisticos, por meio de variáveis pseudorrandômicas, isto é, que são gerados por um algorítmo computacional a partir de uma seed específica
+O método de Monte Carlo constitui uma série de processos matemáticos computacionais utilizados em simulações de larga escala que recorrem a amostragens aleatórias. Podemos resumir o método como uma forma de atingir resultados numéricos para problemas que são, pelo menos em princípio, determínisticos, por meio de variáveis pseudorrandômicas, isto é, que são gerados por um algorítmo computacional a partir de uma seed específica
 
 Este método é particularmente util para fenômenos físicos que são descritos por muitas variáveis e são sujeitos a muitas incertezas experimentais como é o caso daqueles encontrados nas ciências da natureza, incluindo a geociências
+
+O procedimento utilizado no projeto envolve a determinação de funções densidade de probabilidade definida por uma variável aleatória x tal que
+
+$$f(x)\geq 0,\forall x\in \mathbb{R}$$
+$$\int_{-\infty }^{\infty }f(x)dx=1$$
+
+Assumindo que a soma de todas as probabilidades seja igual a um, podemos normalizar esta f.d.p para que possamos sortear um valor e utilizar o método de Monte Carlo.
+
+$$F_{x}=P(X\leq x) = \int_{-\infty }^{x}f(x)udu$$
+
+[Quer saber mais sobre o método de Monte Carlo ? ](https://reysouza.github.io/geo//posts/2020/08/maintaining-foss-links/)
