@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ArcGIS Map with Clustered Markers</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.16/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.16/"></script>
+    <style>
+      html,
+      body,
+      #map {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
+require([  "esri/Map",  "esri/views/MapView",  "esri/layers/TileLayer",  "esri/layers/FeatureLayer",  "esri/widgets/Search",  "esri/Graphic",  "esri/geometry/Point",  "esri/symbols/SimpleMarkerSymbol"], function(Map, MapView, TileLayer, FeatureLayer, Search, Graphic, Point, SimpleMarkerSymbol) {
+  
+  var markerSymbol = new SimpleMarkerSymbol({
+    color: [226, 119, 40],
+    outline: {
+      color: [255, 255, 255],
+      width: 2
+    }
+  });
+
+  var featureLayer = new FeatureLayer({
+    fields: [{
+      name: "ObjectID",
+      alias: "ObjectID",
+      type: "oid"
+    }, {
+      name: "Address",
+      alias: "Address",
+      type: "string"
+    }],
+    objectIdField: "ObjectID",
+    spatialReference: {
+      wkid: 4326
+    },
+    source: [],
+    renderer: {
+      type: "simple",
+      symbol: markerSymbol
+    },
+    geometryType: "point"
+  });
+
+  var map = new Map({
+    basemap: new TileLayer({
+      url: "https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"
+    }),
+    layers: [featureLayer]
+  });
+
+  var view = new MapView({
+    container: "map",
+    map: map,
+    zoom: 4,
+    center: [-100, 39]
+  });
+
+  var search = new Search({
+    view: view
+  });
+  view.ui.add(search, "top-right");
+
+  search.on("search-complete", function(event) {
+    var result = event.results[0].results[0];
+    var address = result.name;
+    var location = result.feature.geometry;
+
+    var graphic = new Graphic({
+      geometry: location,
+      attributes:
+
 
