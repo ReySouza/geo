@@ -1,7 +1,7 @@
 ---
 title: Como podemos utilizar o método de Monte Carlo para determinar o valor de Pi
 published: 2023-02-01
-excerpt: "Como os estatísticos irão salvar o mundo"
+excerpt: "Comendo torta em um cassino italiano"
 permalink: /posts/2020/08/strawberrypi/ 
 ---
 
@@ -52,3 +52,9 @@ $$P(x) = \frac{L}{D\pi }$$
 Um aspecto interessante desta solução é que se considerassemos que a agulha é exatamente metade do comprimento das tábuas, a probabilidade seria o inverso de pi
 
 $$P(x) = \frac{2}{\pi }\frac{\frac{D}{2}}{D}=\frac{1}{\pi }$$
+
+
+# Achando Pi
+
+Podemos rearrangar a expressão encontrada para isolar π
+
