@@ -70,6 +70,6 @@ Como forma de demonstrar, eu coletei 30 palitos de fosforo, cada um tinha cerca 
 
 $$\frac{2\times 4\times 30}{6\times 13} \approx 3.07$$
 
-Encontramos uma aproximação suficiente para pi
+Encontramos uma aproximação suficiente para pi, é claro que podemos atingir valores ainda mais precisos e eventualmente conseguir algumas aproximações famosas como 22/7 ou 355/113, mas para isto, precisariamos de uma quantidade absurda de sorteios, já não conseguiremos prosseguir experimentalmente então podemos utilizar o algoritmo do método de monte carlo e continuar pelo computador.
 
 # Solucão usando Monte Carlo
