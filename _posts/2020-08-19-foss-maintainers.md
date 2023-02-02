@@ -7,7 +7,7 @@ permalink: /posts/2020/08/strawberrypi/
 
 # Problema da agulha de Buffon
 
-"Suponha que o piso onde você está, seja feito de tábuas de madeira paralelas, cada uma com o mesmo comprimento vertical e horizontal. Você então deixa cair uma agulha no chão, qual é a probabilidade de que esta agulha caia atravessando o vão entre duas tábuas ?"
+"Suponha que o piso seja feito de tábuas de madeira paralelas, cada uma com o mesmo comprimento vertical e horizontal. Você então deixa cair uma agulha no chão, qual é a probabilidade de que esta agulha caia atravessando o vão entre duas tábuas ?"
 
 Este problema foi elaborado por George-Louis Leclerc em seu "Essai d'arithmétique morale" como a fundação da geometria estatística. A primeira vista, ele pode parecer bem intuitivo porém, sua demonstração matemática nos dá uma pequena janela para uma propriedade muito interessante que nos levará ao valor de pi.
 
