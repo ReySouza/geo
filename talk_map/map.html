@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Leaflet ArcGIS Map with Overlaid Geological Map of Brazil</title>
+  <title>Leaflet ArcGIS Map with Google Satellite Overlay</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
@@ -25,9 +25,9 @@
       attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
     });
 
-    var geologicalMap = L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}', {
-      attribution: 'Tiles &copy; Esri &mdash; Copyright: &copy;2012 DeLorme',
-      maxZoom: 13
+    var satelliteMap = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+      attribution: 'Tiles &copy; Google',
+      maxZoom: 20
     });
 
     var markers = [
@@ -42,14 +42,14 @@
         .bindPopup(marker.title);
     });
 
-    var baseMaps
-    = {
+    var baseMaps = {
       "Street Map": streetMap,
-      "Geological Map": geologicalMap
+      "Satellite Map": satelliteMap
     };
 
     L.control.layers(baseMaps).addTo(map);
-    streetMap.addTo(map);
+    streetMap.add
+to(map);
   </script>
 </body>
 </html>
