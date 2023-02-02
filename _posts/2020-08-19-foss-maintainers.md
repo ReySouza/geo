@@ -64,4 +64,12 @@ Se considerarmos que a probabilidade da agulha atravessar a tábua é simplesmen
 
 $$\pi =\frac{2L}{D\frac{m}{n}}=\frac{2Ln}{Dm}$$
 
+![mc](https://user-images.githubusercontent.com/122836752/216226732-fcee196b-850b-43aa-980d-d363841ce827.jpg)
+
+Como forma de demonstrar, eu coletei 30 palitos de fosforo, cada um tinha cerca de 4cm de comprimento, eu então derrubei eles em uma folha de papel com linhas a cada 6cm e contei a quantidade de palitos que atravessavam as linhas, totalizando 13, então, colocando na expressão acima
+
+$$\frac{2\times 4\times 30}{6\times 13} \approx 3.07$$
+
+Encontramos uma aproximação suficiente para pi
+
 # Solucão usando Monte Carlo
