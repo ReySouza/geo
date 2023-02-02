@@ -7,7 +7,12 @@ author_profile: true
 
 {% include base_path %}
 
-<a href="https://reysouza.github.io/geo/talk_map/map.html">Veja todos os lugares onde já fui</a>
+<style>
+  a {
+    color: blue;
+  }
+</style>
+<a href="https://reysouza.github.io/geo/talk_map/map.html">Veja um mapa com todos os lugares que já fui</a>
 
 {% for post in site.talks reversed %}
   {% include archive-single-talk.html %}
