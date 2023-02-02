@@ -58,3 +58,8 @@ $$P(x) = \frac{2}{\pi }\frac{\frac{D}{2}}{D}=\frac{1}{\pi }$$
 
 Podemos rearrangar a expressão encontrada para isolar π
 
+$$\pi =\frac{2L}{DP}$$
+
+Se considerarmos que a probabilidade da agulha atravessar a tábua é simplesmente a divisão da quantidade de agulhas que atravessaram a tábua, dividido pela quantidade total de agulhas, temos uma forma bem mais intuitiva de atingir o resultado, se substituirmos este número em nossa expressão, podemos obter uma aproximação para o valor de π
+
+$$\pi =\frac{2L}{D\frac{m}{n}}$$
