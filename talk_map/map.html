@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Leaflet ArcGIS Map with Markers</title>
+  <title>Leaflet ArcGIS Map with Overlaid Geological Map of Brazil</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
@@ -19,24 +19,24 @@
   <div id="map"></div>
 
   <script>
-    var map = L.map('map').setView([38.9072, -77.0369], 13);
+    var map = L.map('map').setView([-14.2350, -51.9253], 5);
 
-    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+    var streetMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
       attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
-    }).addTo(map);
+    });
 
-    var marker = L.marker([38.9072, -77.0369]).addTo(map);
-    marker.bindPopup("<b>Washington D.C.</b><br>This is the capital of the United States.").openPopup();
+    var geologicalMap = L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; Copyright: &copy;2012 DeLorme',
+      maxZoom: 13
+    });
 
-    function addMarker(lat, lng, title) {
-      var newMarker = L.marker([lat, lng]).addTo(map);
-      newMarker.bindPopup(title).openPopup();
-    }
+    var markers = [
+      {lat: -14.2350, lng: -51.9253, title: "Brazil"},
+      {lat: -15.7942, lng: -47.8825, title: "Brasília"},
+      {lat: -22.9068, lng: -43.1729, title: "Rio de Janeiro"},
+      {lat: -23.5505, lng: -46.6333, title: "São Paulo"}
+    ];
 
-    addMarker(38.89511, -77.03637, "Lincoln Memorial");
-    addMarker(38.89165, -77.03829, "Washington Monument");
-    addMarker(38.89769, -77.0366, "White House");
-  </script>
-</body>
-</html>
-
+    markers.forEach(function(marker) {
+      L.marker([marker.lat, marker.lng]).addTo(map)
+        .bindPopup(
