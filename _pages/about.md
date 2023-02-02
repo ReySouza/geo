@@ -23,8 +23,8 @@ Eu nasci na cidade de Pindamonhangaba e pouco tempo depois de nascer, vim para I
 
 ## Galeria
 Esta galeria pode servir para mostrar um pouco do que é ser um geológo pela Unicamp.
-<img src="https://user-images.githubusercontent.com/122836752/216232033-0d5d1317-e1f3-4bce-8b35-df39d7e8293a.jpg" width="300" height="300">
-<img src="https://user-images.githubusercontent.com/122836752/216231384-6f9d8e30-ba89-4586-9e91-7865b81ee521.jpg" width="300" height="300">
-<img src="https://user-images.githubusercontent.com/122836752/216231421-ce9fdb8a-6ea0-4526-80b6-d45b9edea584.jpg" width="300" height="300">
-<img src="https://user-images.githubusercontent.com/122836752/216231474-bf79a047-af99-44c3-8406-82c6af0d1bd4.jpg" width="300" height="300">
-<img src="https://user-images.githubusercontent.com/122836752/216231513-f56cd624-3419-4a26-96e4-89eb70f13db2.jpg" width="300" height="300">
+<img src="https://user-images.githubusercontent.com/122836752/216232033-0d5d1317-e1f3-4bce-8b35-df39d7e8293a.jpg" width="500" height="500">
+<img src="https://user-images.githubusercontent.com/122836752/216231384-6f9d8e30-ba89-4586-9e91-7865b81ee521.jpg" width="500" height="500">
+<img src="https://user-images.githubusercontent.com/122836752/216231421-ce9fdb8a-6ea0-4526-80b6-d45b9edea584.jpg" width="500" height="500">
+<img src="https://user-images.githubusercontent.com/122836752/216231474-bf79a047-af99-44c3-8406-82c6af0d1bd4.jpg" width="500" height="500">
+<img src="https://user-images.githubusercontent.com/122836752/216231513-f56cd624-3419-4a26-96e4-89eb70f13db2.jpg" width="500" height="500">
