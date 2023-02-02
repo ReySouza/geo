@@ -33,7 +33,7 @@ $$\phi =\frac{L\sin \theta }{2}$$
 
 Dessa forma, as condições para nosso experimento são tais que.
 
-$$\left \{(x,\phi  )\in \mathbb{R}^{2}|x+ \phi> D, x-\phi < 0  \right \}$$
+$$(x,\phi  )\in \mathbb{R}^{2}|x+ \phi> D, x-\phi < 0$$
 
 Podemos plotar essa expressão de forma que as diferentes possibilidades sejam representadas com cores diferentes, a partir deste gráfico, podemos determinar que a probabilidade de algum evento, ou configuração específica da agulha ocorrer, sua probabilidade será dada pela divisão da área da região específica a este evento pela área do universo.
 
