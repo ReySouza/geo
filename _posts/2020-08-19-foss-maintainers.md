@@ -47,7 +47,7 @@ $$\int_{0}^{\pi }\left ( \phi  \right )d\theta =\int_{0}^{\pi }\left ( \frac{L\s
 
 Podemos ver intuitivamente pelo gráfico que a probabilidade para x + φ > D será igual a L pelo efeito de simetria, então, podemos finalmente calcular a probabilidade de que a agulha cruze o vão entre as tábuas de madeira.
 
-$$P(x) = \frac{L}{D\pi }$$
+$$P(x) = \frac{2L}{D\pi }$$
 
 Um aspecto interessante desta solução é que se considerassemos que a agulha é exatamente metade do comprimento das tábuas, a probabilidade seria o inverso de pi
 
