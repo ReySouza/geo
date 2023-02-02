@@ -60,6 +60,6 @@ Podemos rearrangar a expressão encontrada para isolar π
 
 $$\pi =\frac{2L}{DP}$$
 
-Se considerarmos que a probabilidade da agulha atravessar a tábua é simplesmente a divisão da quantidade de agulhas que atravessaram a tábua, dividido pela quantidade total de agulhas, temos uma forma bem mais intuitiva de atingir o resultado, se substituirmos este número em nossa expressão, podemos obter uma aproximação para o valor de π
+Se considerarmos que a probabilidade da agulha atravessar a tábua é simplesmente a divisão da quantidade de agulhas que atravessaram a tábua  (m), dividido pela quantidade total de agulhas (n), temos uma forma bem mais intuitiva de atingir o resultado, se substituirmos isto em nossa expressão, podemos obter uma aproximação experimental para o valor de π
 
-$$\pi =\frac{2L}{D\frac{m}{n}}$$
+$$\pi =\frac{2L}{D\frac{m}{n}}=\frac{2Ln}{Dm}$$
