@@ -24,10 +24,8 @@ Eu nasci na cidade de Pindamonhangaba e pouco tempo depois de nascer, vim para I
 ## Galeria
 Esta galeria pode servir para mostrar um pouco do que é ser um geológo pela Unicamp.
 
-<div style="display: flex;">
   <img src="![20220314_072416](https://user-images.githubusercontent.com/122836752/216230349-3f430ce8-b95b-4bb1-a4f9-ace0ca8d3db1.jpg)" style="width: 33.33%; padding: 1px;">
   <img src="![20220309_175700](https://user-images.githubusercontent.com/122836752/216230392-b6b8e34b-8967-4fe9-bcd4-bc6836dcd6a9.jpg)
 " style="width: 33.33%; padding: 1px;">
   <img src="![20220528_132712](https://user-images.githubusercontent.com/122836752/216230415-65e24caa-d29e-4fc4-91fc-e1de570ead7d.jpg)
 " style="width: 33.33%; padding: 1px;">
-</div>
