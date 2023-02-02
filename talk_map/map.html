@@ -1,84 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>ArcGIS Map with Clustered Markers</title>
-    <link rel="stylesheet" href="https://js.arcgis.com/4.16/esri/themes/light/main.css" />
-    <script src="https://js.arcgis.com/4.16/"></script>
-    <style>
-      html,
-      body,
-      #map {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script src="app.js"></script>
-  </body>
-</html>
-require([  "esri/Map",  "esri/views/MapView",  "esri/layers/TileLayer",  "esri/layers/FeatureLayer",  "esri/widgets/Search",  "esri/Graphic",  "esri/geometry/Point",  "esri/symbols/SimpleMarkerSymbol"], function(Map, MapView, TileLayer, FeatureLayer, Search, Graphic, Point, SimpleMarkerSymbol) {
-  
-  var markerSymbol = new SimpleMarkerSymbol({
-    color: [226, 119, 40],
-    outline: {
-      color: [255, 255, 255],
-      width: 2
+<head>
+  <title>Leaflet ArcGIS Map with Markers</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
     }
-  });
+  </style>
+</head>
+<body>
+  <div id="map"></div>
 
-  var featureLayer = new FeatureLayer({
-    fields: [{
-      name: "ObjectID",
-      alias: "ObjectID",
-      type: "oid"
-    }, {
-      name: "Address",
-      alias: "Address",
-      type: "string"
-    }],
-    objectIdField: "ObjectID",
-    spatialReference: {
-      wkid: 4326
-    },
-    source: [],
-    renderer: {
-      type: "simple",
-      symbol: markerSymbol
-    },
-    geometryType: "point"
-  });
+  <script>
+    var map = L.map('map').setView([38.9072, -77.0369], 13);
 
-  var map = new Map({
-    basemap: new TileLayer({
-      url: "https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"
-    }),
-    layers: [featureLayer]
-  });
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+    }).addTo(map);
 
-  var view = new MapView({
-    container: "map",
-    map: map,
-    zoom: 4,
-    center: [-100, 39]
-  });
+    var marker = L.marker([38.9072, -77.0369]).addTo(map);
+    marker.bindPopup("<b>Washington D.C.</b><br>This is the capital of the United States.").openPopup();
 
-  var search = new Search({
-    view: view
-  });
-  view.ui.add(search, "top-right");
+    function addMarker(lat, lng, title) {
+      var newMarker = L.marker([lat, lng]).addTo(map);
+      newMarker.bindPopup(title).openPopup();
+    }
 
-  search.on("search-complete", function(event) {
-    var result = event.results[0].results[0];
-    var address = result.name;
-    var location = result.feature.geometry;
-
-    var graphic = new Graphic({
-      geometry: location,
-      attributes:
-
+    addMarker(38.89511, -77.03637, "Lincoln Memorial");
+    addMarker(38.89165, -77.03829, "Washington Monument");
+    addMarker(38.89769, -77.0366, "White House");
+  </script>
+</body>
+</html>
 
