@@ -41,4 +41,4 @@ Assumindo que a soma de todas as probabilidades seja igual a um, podemos normali
 
 $$F_{x}=P(X\leq x) = \int_{-\infty }^{x}f(x)udu$$
 
-[Quer saber mais sobre o método de Monte Carlo ? ](https://reysouza.github.io/geo//posts/2020/08/maintaining-foss-links/)
+[Quer saber mais sobre o método de Monte Carlo ? ](https://reysouza.github.io/geo//posts/2020/08/strawberrypi/)
