@@ -35,8 +35,6 @@ Dessa forma, as condições para nosso experimento são tais que.
 
 $$(x,\phi  )\in \mathbb{R}^{2}|x+ \phi> D, x-\phi < 0$$
 
-Podemos plotar essa expressão de forma que as diferentes possibilidades sejam representadas com cores diferentes, a partir deste gráfico, podemos determinar que a probabilidade de algum evento, ou configuração específica da agulha ocorrer, sua probabilidade será dada pela divisão da área da região específica a este evento pela área do universo.
-
 A área total de nosso universo, ou seja, a soma das probabilidades de todas as possíveis configurações da agulha é dada pela integral dupla delimitada pelas variáveis de estado.
 
 $$\int_{0}^{\pi}\int_{0}^{D}dxd\theta  =D\pi$$
@@ -73,3 +71,5 @@ $$\frac{2\times 4\times 30}{6\times 13} \approx 3.07$$
 Encontramos uma aproximação suficiente para pi, é claro que podemos atingir valores ainda mais precisos e eventualmente conseguir algumas aproximações famosas como 22/7 ou 355/113, mas para isto, precisariamos de uma quantidade absurda de sorteios, já não conseguiremos prosseguir experimentalmente então podemos utilizar o algoritmo do método de monte carlo e continuar pelo computador.
 
 # Solucão usando Monte Carlo
+
+
