@@ -77,8 +77,8 @@ var greenIcon = L.icon({
   popupAnchor: [1, -34],
 });
 
-var purpleIcon = L.icon({
-  iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-purple.png',
+var violetIcon = L.icon({
+  iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
@@ -103,7 +103,7 @@ markers.forEach(function(marker) {
   } else if (marker.title.includes("GF303")) {
     icon = yellowIcon;
   } else {
-    icon = purpleIcon; 
+    icon = violetIcon; 
   }
 
   L.marker([marker.lat, marker.lng], { icon: icon }).addTo(map)
