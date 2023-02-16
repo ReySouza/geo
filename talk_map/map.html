@@ -60,11 +60,6 @@
       {lat: -19.28208789560784, lng: -49.73753734129185, title: "Gurinhatã, MG - GE601"},
     ];
 
-markers.forEach(function(marker) {
-  L.marker([marker.lat, marker.lng]).addTo(map)
-    .bindPopup("<h3>" + marker.title + "</h3><p>" + marker.date + "</p><p>" + marker.description + "</p><img src='" + marker.image + "' alt='Marker Image' width='200px'>");
-});
-
 var redIcon = L.icon({
   iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
   iconSize: [25, 41],
