@@ -111,7 +111,7 @@ markers.forEach(function(marker) {
 
   L.marker([marker.lat, marker.lng], { icon: icon }).addTo(map)
     .bindPopup("<h3>" + marker.title + "</h3><p>" + marker.date + "</p><p>" + marker.description + "</p><img src='" + marker.image + "' alt='Marker Image' width='200px'>");
-});
+};
 
     var baseMaps = {
       "Street Map": streetMap,
