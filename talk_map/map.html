@@ -60,10 +60,10 @@
       {lat: -19.28208789560784, lng: -49.73753734129185, title: "Gurinhatã, MG - GE601"},
     ];
 
-    markers.forEach(function(marker) {
-      L.marker([marker.lat, marker.lng]).addTo(map)
-        .bindPopup(marker.title, marker.description, marker.image);
-    });
+markers.forEach(function(marker) {
+  L.marker([marker.lat, marker.lng]).addTo(map)
+    .bindPopup("<h3>" + marker.title + "</h3><p>" + marker.description + "</p><img src='" + marker.image + "' alt='Marker Image' width='100px'>");
+});
 
     var baseMaps = {
       "Street Map": streetMap,
