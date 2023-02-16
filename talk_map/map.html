@@ -103,7 +103,8 @@ markers.forEach(function(marker) {
   } else if (marker.title.includes("GF303")) {
     icon = yellowIcon;
   } else {
-    icon = purpleIcon;
+    icon = purpleIcon; 
+  }
 
   L.marker([marker.lat, marker.lng], { icon: icon }).addTo(map)
     .bindPopup("<h3>" + marker.title + "</h3><p>" + marker.date + "</p><p>" + marker.description + "</p><img src='" + marker.image + "' alt='Marker Image' width='200px'>");
