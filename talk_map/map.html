@@ -62,7 +62,7 @@
 
     markers.forEach(function(marker) {
       L.marker([marker.lat, marker.lng]).addTo(map)
-        .bindPopup(marker.title);
+        .bindPopup(marker.title, marker.description, marker.image);
     });
 
     var baseMaps = {
