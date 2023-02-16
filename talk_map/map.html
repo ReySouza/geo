@@ -118,19 +118,72 @@ markers.forEach(function(marker) {
     L.control.layers(baseMaps).addTo(map);
     streetMap.addTo(map);
 
-var legend = L.control({position: 'bottomright'});
+var legendItems = [
+  { label: "GE606", icon: redIcon },
+  { label: "GN304", icon: blueIcon },
+  { label: "GF508", icon: greenIcon },
+  { label: "GF303", icon: yellowIcon },
+  { label: "Other", icon: violetIcon }
+];
 
-legend.onAdd = function (map) {
-  var div = L.DomUtil.create('div', 'legend');
-  div.innerHTML += '<i style="background: red"></i><span>Petrografia e Petrologia Metamórfica</span><br>';
-  div.innerHTML += '<i style="background: blue"></i><span>Trabalho de Campo</span><br>';
-  div.innerHTML += '<i style="background: green"></i><span>Pedologia</span><br>';
-  div.innerHTML += '<i style="background: violet"></i><span>Geomorfologia</span><br>';
-  div.innerHTML += '<i style="background: yellow"></i><span>Sedimentalogia</span><br>';
+// Add the legend to the map
+var legend = L.control({ position: "bottomright" });
+legend.onAdd = function(map) {
+  var div = L.DomUtil.create("div", "legend");
+  div.innerHTML = "<h4>Legend</h4>";
+  for (var i = 0; i < legendItems.length; i++) {
+    div.innerHTML +=
+      '<i style="background:' +
+      getColor(legendItems[i].label) +
+      '"></i> ' +
+      legendItems[i].label +
+      "<br>";
+  }
   return div;
 };
-
 legend.addTo(map);
+
+// Add event listeners to the legend items
+var legendIcons = document.querySelectorAll(".legend i");
+for (var i = 0; i < legendIcons.length; i++) {
+  var color = getColor(legendItems[i].label);
+  legendIcons[i].addEventListener("mouseover", function() {
+    markers.forEach(function(marker) {
+      if (marker.options.icon.options.iconUrl === color) {
+        marker.setOpacity(1);
+      } else {
+        marker.setOpacity(0);
+      }
+    });
+  });
+  legendIcons[i].addEventListener("mouseout", function() {
+    markers.forEach(function(marker) {
+      marker.setOpacity(1);
+    });
+  });
+}
+
+// Define a function to get the color associated with a label
+function getColor(label) {
+  var color;
+  switch (label) {
+    case "GE606":
+      color = redIcon.options.iconUrl;
+      break;
+    case "GN304":
+      color = blueIcon.options.iconUrl;
+      break;
+    case "GF508":
+      color = greenIcon.options.iconUrl;
+      break;
+    case "GF303":
+      color = yellowIcon.options.iconUrl;
+      break;
+    default:
+      color = violetIcon.options.iconUrl;
+  }
+  return color;
+}
 
   </script>
 </body>
