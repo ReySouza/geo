@@ -185,6 +185,14 @@ function getColor(label) {
   return color;
 }
 
+    var baseMaps = {
+      "Street Map": streetMap,
+      "Satellite Map": satelliteMap
+    };
+
+    L.control.layers(baseMaps).addTo(map);
+    streetMap.addTo(map);
+
   </script>
 </body>
 </html>
