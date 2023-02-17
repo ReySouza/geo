@@ -14,6 +14,8 @@ Um relatório produzido para este projeto estará disponível no [link](https://
 
 # Raios Cósmicos
 
+
+
 Os Raios Cósmicos são partículas elementares produzidas em eventos astronômicos massivos que podem atingir energias na ordem de $$10^{21}$$ eV, em sua grande maioria, são núcleos atômicos de elementos abundantes no universo, que são então acelerados a velocidades próximas da luz para vagarem pelo espaço. Ao acertar a atmosfera terrestre e interagir com as moléculas de gás, os raios cósmicos produzem chuveiros atmosféricos extensos contendo diversas partículas secundárias com tempo de meia-vida mais curto como pions, muons e neutrinos.
 
 ![cosmic ray shower](https://github.com/ReySouza/geo/blob/master/gshower.png?raw=true)
@@ -23,6 +25,8 @@ A descoberta dos Raios cósmicos foi um trabalho coletivo entre diversos cientis
 Theodor Wulf (1868-1946) desenvolveu um eletroscópio capaz de detectar a quantidade de partículas radioativas estavam presentes na atmosfera, ele acreditava que se as fontes naturais de radiação no solo fossem as responsáveis pela ionização, então a medida que ele subisse, elas deveriam cair drasticamente. No chão, ele obteu uma leitura de 6 íons / cm cúbico e então subiu ao topo da torre eiffel a 330m, lá ele obteu uma leitura de apenas 3.5 íons / cm cúbico, uma queda muito menor do que esperava. Em 1911, Domenico Pacini (1878-1934), outro físico interessado em resolver o problema, desenvolveu o mesmo experimento em condições diferentes, ele obteve leituras no topo de montanhas e no fundo do oceano e percebeu que a ionização diminuia drasticamente no oceano.
 
 Em 1912, Victor Hess (1883-1964) desenvolveu o mesmo experimento só que um grau ainda maior de meticulosidade, ele fez viagens com balões, chegando até 5300 m de altitude, lá ele percebeu que a ionização diminuia até uma altitude de 1km onde ela então aumentava novamente, ele repetiu estas viagens diversas vezes, de dia e de noite e até mesmo durante um eclipse solar para confirmar que a origem da radiação era extraterrestre.
+
+![Hess](https://github.com/ReySouza/geo/blob/master/hess.PNG?raw=true)
 
 A confirmação da natureza dos raio cósmicos veio somente com Robert Andrews Millikan (1868-1953) que cunhou o termo "Raios Cósmicos" e determinou que a composição destas poartículas deveria ser de 90% prótons, 9% partículas alfa e cerca de 1% outras partículas como elétrons e elementos mais pesados. Pierre Victor Auger (1899-1993) desenvolveu um trabalho concomitante onde ele conseguiu determinar que eventos de raios cósmicos podem estar conectados, partículas primárias poderiam interagir com os gases na atmosfera e gerar uma cascata de outros efeitos em um "Chuveiro Atmosférico Extenso"
 
