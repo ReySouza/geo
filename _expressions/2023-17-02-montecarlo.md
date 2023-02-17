@@ -1,6 +1,6 @@
 ---
 title: Simulações de Monte Carlo aplicadas ao Estudo de Raios Cósmicos
-excerpt: Análises estatísticas envolvendo as propriedades dos Raios Cósmicos
+excerpt: O estudo do espectro de energia associado ao fluxo de raios cósmicos interagindo com a atmosfera é de grande importância para as ciências pois apresenta uma grande ameaça para nossa indústria de eletrônicos e telecomunicações. Os raios cósmicos podem atingir energias na escala de 1020eV e gerar cascatas e reações em cadeia que podem se estender por quilômetros e assim gerar mais partículas ainda extremamente energéticas, essas cascatas, denominadas de chuveiros atmosféricos extensos são detectadas por observatórios ao redor do mundo inteiro e nos fornecem informações importantes sobre suas origens, sua energia e como interagem com as partículas na atmosfera e com as rochas na superfície da terra
 collection: expressions
 permalink: /expressions/montecarlo/ 
 ---
@@ -14,7 +14,7 @@ Um relatório produzido para este projeto estará disponível no [link](https://
 
 # Raios Cósmicos
 
-
+![nebula](https://github.com/ReySouza/geo/blob/master/Som_8_08_p0.jpg?raw=true)
 
 Os Raios Cósmicos são partículas elementares produzidas em eventos astronômicos massivos que podem atingir energias na ordem de $$10^{21}$$ eV, em sua grande maioria, são núcleos atômicos de elementos abundantes no universo, que são então acelerados a velocidades próximas da luz para vagarem pelo espaço. Ao acertar a atmosfera terrestre e interagir com as moléculas de gás, os raios cósmicos produzem chuveiros atmosféricos extensos contendo diversas partículas secundárias com tempo de meia-vida mais curto como pions, muons e neutrinos.
 
