@@ -1,8 +1,12 @@
 ---
-title: Simulações de Monte Carlo aplicadas ao Estudo de Raios Cósmicos
-excerpt: Análises estatísticas envolvendo as propriedades dos Raios Cósmicos
+title: Conclusão do modelo geológico 3D da bacia de Taubaté e aplicação na pesquisa educacional em Geociências
+excerpt: A visualização em três dimensões é imprescindível para estudantes e profissionais de Geologia
+pois facilita o entendimento de corpos rochosos e dos processos que controlam a dinâmica terrestre. Modelos
+3D são essenciais em diversas áreas de atuação, como prospecção de minérios e hidrocarbonetos. O projeto
+da Bacia de Taubaté dará continuidade a projetos anteriores, que desenvolvem modelos físicos de algumas
+bacias brasileiras.
 collection: expressions
-permalink: /expressions/montecarlo/ 
+permalink: /expressions/geobacias/ 
 ---
 
 Este projeto foi desenvolvido com apoio e financiamento do [Serviço de Apoio ao Estudante](https://www.sae.unicamp.br/portal/pt/) e pela [Pró-Reitoria de Pesquisa da Unicamp](https://www.prp.unicamp.br/iniciacao-cientifica/pibic-pibiti/programas/pibic/#:~:text=O%20objetivo%20do%20Programa%20Institucional,da%20Unicamp%2C%20outorgando%20bolsas%20no) a partir do Programa Institucional de Bolsas de Iniciação Cientifica e Tecnológica dentro da modalidade de projeto de Iniciação Cientifica. O projeto é orientado pelo [Prof. Dr. Celso Dal Ré Carneiro](https://ige.unicamp.br/colaborador/celso-dal-re-carneiro) e recebe o suporte tecnológico do [Centro de Tecnologia da Informação Renato Archer](https://www1.cti.gov.br/pt-br).
