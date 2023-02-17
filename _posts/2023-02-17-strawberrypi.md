@@ -13,6 +13,8 @@ Este problema foi elaborado por George-Louis Leclerc em seu "Essai d'arithmétiq
 
 Vamos começar a demonstração do problema colocando ele em termos matemáticos. Nós temos um chão feito de tábuas de madeira, a grossura entre as tábuas é dada por D, vamos considerar que o vão entre as tábuas é dada por um segmento de reta e por fim, vamos considerar que a agulha possui comprimento L < D e um angulo dado por θ.
 
+![passo1](https://raw.githubusercontent.com/ReySouza/geo/master/1.png)
+
 # Demonstração Analitica
 
 Quando consideramos a posição da agulha em nosso problema, só precisamos nos concentrar em 3 variáveis principais, a posição do centro da agulha no eixo x, o ângulo que forma em relação a tábua e seu comprimento, então suas variáveis de estado neste momento serão L(x,θ). 
@@ -25,7 +27,9 @@ A primeira vista poderiamos considerar que o ângulo da agulha precisaria ser de
 
 $$0\leq \theta \leq \pi $$
 
-Precisamos apenas que a ponta da agulha atravesse o vão entre as tábuas para contar, então, respeitando as condições impostas acima, a distância que a ponta da agulha está de seu centro considerando um ângulo qualquer é dado por
+Precisamos apenas que a ponta da agulha atravesse o vão entre as tábuas para contar, então, respeitando as condições impostas acima, a distância que a ponta da agulha está de seu centro considerando um ângulo qualquer é dado por.
+
+![passo1](https://raw.githubusercontent.com/ReySouza/geo/master/2.png)
 
 $$\sin \theta  = \frac{\phi }{\frac{L}{2}}$$
 
