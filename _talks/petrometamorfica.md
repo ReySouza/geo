@@ -2,14 +2,14 @@
 title: "Petrografia e Petrologia Metamórfica - GE606 "
 collection: talks
 type: "Trabalho de Campo"
-permalink: /talks/campo0/ 
+permalink: /talks/petrometamorfo/ 
 venue: "Orógeno Brasilia Sul"
 date: 2022-10-13
 location: "São Paulo e Minas Gerais"
 excerpt: "A atividade de campo desenvolvida nos pontos ilustrados acima e que serão descritos ao longo deste relatório compreendem diversas classes litológicas, a gênese dessas classes, suas feições estruturais e características mineralógicas nos fornecem um pequeno olhar para o último grande evento de orogenia no Brasil, evento que teria levado a formação do paleocontinente Gondwana no pré-cambriano. As formações que serão estudados servem como indicadores dos processos geológicos, estruturais e petrológicos que o antigo paleocontinente sofreu, além de fornecer indicadores de províncias metalogênicas onde recursos valiosos para o setor primário da economia Brasileira."
 ---
 
-[Link para o Relatório](https://reysouza.github.io/geo/campo0.pdf)
+[Link para o Relatório](https://reysouza.github.io/geo/metamorfo.pdf)
 
 O trabalho de campo foi coordenado pelo [Prof. Dr. Wagner da Silva Amaral](https://portal.ige.unicamp.br/docente/wagner-da-silva-amaral) e auxiliado pela PED: Julia Grochowski e pelas PADs Vitória Ventura e Emilly de Barros.
 
