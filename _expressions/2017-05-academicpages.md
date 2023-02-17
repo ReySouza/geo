@@ -1,10 +1,6 @@
 ---
 title: Conclusão do modelo geológico 3D da bacia de Taubaté e aplicação na pesquisa educacional em Geociências
-excerpt: A visualização em três dimensões é imprescindível para estudantes e profissionais de Geologia
-pois facilita o entendimento de corpos rochosos e dos processos que controlam a dinâmica terrestre. Modelos
-3D são essenciais em diversas áreas de atuação, como prospecção de minérios e hidrocarbonetos. O projeto
-da Bacia de Taubaté dará continuidade a projetos anteriores, que desenvolvem modelos físicos de algumas
-bacias brasileiras.
+excerpt: A visualização em três dimensões é imprescindível para estudantes e profissionais de Geologia pois facilita o entendimento de corpos rochosos e dos processos que controlam a dinâmica terrestre. Modelos 3D são essenciais em diversas áreas de atuação, como prospecção de minérios e hidrocarbonetos. O projeto da Bacia de Taubaté dará continuidade a projetos anteriores, que desenvolvem modelos físicos de algumas bacias brasileiras. 
 collection: expressions
 permalink: /expressions/geobacias/ 
 ---
