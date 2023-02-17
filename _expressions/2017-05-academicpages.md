@@ -18,6 +18,8 @@ A confecção de modelos tridimensionais envolve uma série de etapas com progra
 Poços de Caldas é um município localizado no sul do estado de Minas Gerais, próximo da divisa com o Estado de São Paulo, possui cerca de 544 km quadrados e fica a uma altitude média de 1300m. A grande fama turistica da cidade provém de suas fontes hidrotermais e águas sulfurosas, que de acordo com mitos locais, podem curar doenças, estas fontes são resquícios de uma antiga caldeira vulcânica datada de pelo menos 80 Ma.
 
  A caldeira vulcânica de Poços de Caldas compõe um complexo alcalino em formato elíptico que engloba boa parte do município, após um processo de domeamento e muitas fraturas seguindo a quebra do continente Gondwana, seu domo desabou gerando o planalto de Poços de Caldas e o rodeando com as bordas da antiga caldeira que logo se tornaram as serras de Poços de Caldas, que podem atingir altitudes de até 1800m.
+
+![Poços](https://raw.githubusercontent.com/ReySouza/geo/master/poçosdecaldas.jpg)
  
  Agora que já sabemos um pouco mais sobre a geomorfologia e a geologia de Poços de Caldas, podemos iniciar o trabalho abrindo o Qgis. Iniciaremos o trabalho escolhendo o sistema de Coordenadas do projeto, neste caso escolheremos o EPSG: 31983 ou SIRGAS 2000 / UTM Zona 23S, a partir da extensão QuickMapServices, podemos abrir o google maps e mover a tela para a área onde a caldeira fica localizada
 
