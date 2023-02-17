@@ -16,7 +16,7 @@ Um relatório produzido para este projeto estará disponível no [link](https://
 
 Os Raios Cósmicos são partículas elementares produzidas em eventos astronômicos massivos que podem atingir energias na ordem de $$10^{21}$$ eV, em sua grande maioria, são núcleos atômicos de elementos abundantes no universo, que são então acelerados a velocidades próximas da luz para vagarem pelo espaço. Ao acertar a atmosfera terrestre e interagir com as moléculas de gás, os raios cósmicos produzem chuveiros atmosféricos extensos contendo diversas partículas secundárias com tempo de meia-vida mais curto como pions, muons e neutrinos.
 
-
+![cosmic ray shower](https://github.com/ReySouza/geo/blob/master/gshower.png?raw=true)
 
 A descoberta dos Raios cósmicos foi um trabalho coletivo entre diversos cientistas ao longo de mais de 40 anos para responder uma pergunta que perseguia os físicos desde a descoberta da radiação em 1903 por Marie Curie (1867-1934), seu marido, Pierre Curie (1859-1906) e Henri Becquerel (1852). Qual era a origem das partículas radioativas responsáveis pela ionização do ar, uma hipotése inicial era de que a ionização do ar ocorria por meio da emissão partículas ionizantes por elementos radioativos encontrados no solo, Urânio em especial aparecia frequentemente ligado a rochas sedimentares e argilominerais através do íon Uranila.
 
