@@ -76,4 +76,15 @@ Encontramos uma aproximação suficiente para pi, é claro que podemos atingir v
 
 # Solucão usando Monte Carlo
 
+Abrindo o terminal Python podemos iniciar nosso trabalho importando algumas bibliotecas importantes, para este projeto, iremos precisar de 4, Matplotlib.pyplot, Random, Math e Numpy
+
+```
+import matplotlib.pyplot as plt
+import random
+import math
+import numpy as np
+```
+Precisamos definir as variáveis de estado de nossa agulha junto com a quantidade de agulhas que serão arremessadas, para isto, iremos definir um objeto de classe int chamado AGULHAS que irá conter o número de agulhas que serão arremessadas.
+
+
 
