@@ -182,6 +182,8 @@ Vamos iniciar a primeira simulação com 50 agulhas com comprimento de 0.5 sendo
 
 No primeiro lançamento das 50 agulhas, 15 intersectaram o cruzamento das tábuas, isso nos fornece uma aproximação de Pi igual a 3.333333, eu farei mais 9 lançamentos nessas condições e então irei comparar o resultados pro valor de pi
 
+![50-0.5-2](https://raw.githubusercontent.com/ReySouza/geo/master/50-0.5-2.PNG)
+
 ```
 Lançamento 1 - 3.333333 (15 interseções)
 Lançamento 2 - 2.7777777 (18 interseções)
@@ -198,6 +200,8 @@ A melhor aproximação veio com os lançamentos 1 e 7 que acertaram o primeiro d
 
 Vamos aumentar a quantidade de agulhar para 1000, mantendo o mesmo comprimento e a mesma quantidade de tábuas
 
+![1000-0.5-2](https://raw.githubusercontent.com/ReySouza/geo/master/1000-0.5-2.PNG)
+
 ```
 Lançamento 1 - 3.0769230 (325 interseções)
 Lançamento 2 - 3.2679738 (306 interseções)
@@ -210,7 +214,9 @@ Lançamento 8 - 2.9850746 (335 interseções)
 Lançamento 9 - 3.1847133 (314 interseções)
 Lançamento 10 - 2.832861 (353 interseções)
 ```
-A melhor aproximação veio com 318 interseções onde obtivemos uma aproximação de pi até a segunda casa decimal, o lançamento 3 e 6 obtiveram esse resultado, a média desse lançamento foi de 3.123228 e o desvio padrão foi de 0.1290587. Vamos encerrar os experimentos tradicionais com 10000 agulhas e as mesmas condições de comprimento e numero de tábuas.
+A melhor aproximação veio com 318 interseções onde obtivemos uma aproximação de pi até a segunda casa decimal, o lançamento 3 e 6 obtiveram esse resultado, a média desse lançamento foi de 3.123228 e o desvio padrão foi de 0.1290587. Vamos encerrar o experimento com 10000 agulhas e as mesmas condições de comprimento e numero de tábuas.
+
+![10000-0.5-2](https://raw.githubusercontent.com/ReySouza/geo/master/10000-0.5-2.PNG)
 
 ```
 Lançamento 1 - 3.151591 (3173 interseções)
