@@ -84,9 +84,11 @@ import random
 import math
 import numpy as np
 ```
-Precisamos definir as variáveis de estado de nossa agulha junto com a quantidade de agulhas que serão arremessadas, para isto, iremos definir um objeto de classe int chamado AGULHAS que irá conter o número de agulhas que serão arremessadas. Após isso, criaremos um objeto de class DefineNeddle, este objeto conterá as variáveis de estado da agulha como a suas coordenadas x e y, seu ângulo θ e o seu valor de L, os valores foram definidos como None para que um loop de if ocorra e os valores sejam definidos de forma aleatória, vamos iniciar esse experimento definindo todas as agulhas com o mesmo valor de L
+Precisamos definir as variáveis de estado de nossa agulha junto com a quantidade de agulhas que serão arremessadas, para isto, iremos definir um objeto de classe int chamado AGULHAS que irá conter o número de agulhas que serão arremessadas. Após isso, criaremos um objeto de class DefineNeddle, este objeto conterá as variáveis de estado da agulha como a suas coordenadas x e y, seu ângulo θ e o seu valor de L, os valores foram definidos como None para que um loop de if ocorra e os valores sejam definidos de forma aleatória.
 
 ```
+AGULHAS = 0
+
 class DefineNeedle:
     def __init__(self, x=None, y=None, theta=None, length=0.5):
         if x is None:
@@ -115,7 +117,7 @@ Utilizamos o método abaixo para checkar se a coordenada y da agulha intersecta 
  def intersects_with_y(self, y):
         return self.end_points[0][1] < y and self.end_points[1][1] > y
 ```
-Enfim iniciamos outra classe chamada BuffonSimulation que irá conter as informações básicas da nossa simulação, iniciaremos com o atributo self.boards em 2 o que significa que a simulação começara apenas com dois encontros entre tábuas, podemos aumentar este valor depois, definimos o número de interseções como sendo 0 no ínicio do experimento e o número de agulhas vázio.
+Enfim iniciamos outra classe chamada BuffonSimulation que irá conter as informações básicas da nossa simulação, iniciaremos com o atributo self.boards em 2 o que significa que a simulação começara apenas com dois encontros entre tábuas, definimos o número de interseções como sendo 0 no ínicio do experimento e o número de agulhas vázio.
 
 ```
 class BuffonSimulation:
@@ -155,5 +157,70 @@ class BuffonSimulation:
         self.buffon.plot(x_coordinates, y_coordinates,
                          color='red', linewidth=1)
 ```
+Encerramos nosso código definindo a função para estimar o valor de pi e com algumas outras variáveis da simulação
 
+```
+    def plot_needles(self):
+        for needle in range(AGULHAS):
+            self.toss_needles()
+            self.results_text.set_text(self.estimate_pi(needle+1))
+            if (needle+1) % 200 == 0:
+                plt.pause(1/200)
+        plt.title("Estimando Pi com probabilidade")
 
+    def plot(self):
+        self.plot_floor_boards()
+        self.plot_needles()
+        plt.show()
+
+simulation = BuffonSimulation()
+simulation.plot()
+print(type(AGULHAS))
+
+```
+Vamos iniciar a primeira simulação com 50 agulhas com comprimento de 0.5 sendo arremessadas em uma mesa contendo 3 tábuas.
+
+No primeiro lançamento das 50 agulhas, 15 intersectaram o cruzamento das tábuas, isso nos fornece uma aproximação de Pi igual a 3.333333, eu farei mais 9 lançamentos nessas condições e então irei comparar o resultados pro valor de pi
+
+```
+Lançamento 1 - 3.333333 (15 interseções)
+Lançamento 2 - 2.7777777 (18 interseções)
+Lançamento 3 - 4.54545454 (11 interseções)
+Lançamento 4 - 2 (25 interseções)
+Lançamento 5 - 2.5 (20 interseções)
+Lançamento 6 - 2.6315789 (19 interseções)
+Lançamento 7 - 3.5714285 (14 interseções)
+Lançamento 8 - 2.5 (20 interseções)
+Lançamento 9 - 4.166666 (12 interseções)
+Lançamento 10 - 5.555555 (9 interseções)
+```
+A melhor aproximação veio com os lançamentos 1 e 7 que acertaram o primeiro digito de Pi, o lançamento 1 foi o que mais se aproximou do resultado. Em geral, a média foi 3.358168 e o desvio padrão foi de 1.111571
+
+Vamos aumentar a quantidade de agulhar para 1000, mantendo o mesmo comprimento e a mesma quantidade de tábuas
+
+```
+Lançamento 1 - 3.0769230 (325 interseções)
+Lançamento 2 - 3.2679738 (306 interseções)
+Lançamento 3 - 3.1446540 (318 interseções)
+Lançamento 4 - 3.2154340 (311 interseções)
+Lançamento 5 - 3.2154340 (311 interseções)
+Lançamento 6 - 3.1446540 (318 interseções)
+Lançamento 7 - 3.1645569 (316 interseções)
+Lançamento 8 - 2.9850746 (335 interseções)
+Lançamento 9 - 3.1847133 (314 interseções)
+Lançamento 10 - 2.832861 (353 interseções)
+```
+A melhor aproximação veio com 318 interseções onde obtivemos uma aproximação de pi até a segunda casa decimal, o lançamento 3 e 6 obtiveram esse resultado, a média desse lançamento foi de 3.123228 e o desvio padrão foi de 0.1290587. Vamos encerrar os experimentos tradicionais com 10000 agulhas e as mesmas condições de comprimento e numero de tábuas.
+
+```
+Lançamento 1 - 3.151591 (3173 interseções)
+Lançamento 2 - 3.148614 (3176 interseções)
+Lançamento 3 - 3.175611 (3140 interseções)
+Lançamento 4 - 3.066544 (3261 interseções)
+Lançamento 5 - 3.165558 (3159 interseções)
+Lançamento 6 - 3.209242 (3116 interseções)
+Lançamento 7 - 3.167564 (3157 interseções)
+Lançamento 8 - 3.189792 (3135 interseções)
+Lançamento 9 - 3.142677 (3182 interseções)
+Lançamento 10 - 3.15357 (3171 interseções)
+```
