@@ -64,5 +64,3 @@ Perceba que a quantidade de vertices do objeto saltou de 4.225 para 66.049, é p
 Dessa forma, conseguimos gerar um modelo tridimensional a partir de um arquivo matricial em um mapa.
 
 ![Poços](https://raw.githubusercontent.com/ReySouza/geo/master/Passo11.PNG)
-
-[Quer saber mais sobre a Bacia de Taubaté ?](https://reysouza.github.io/geo//posts/2023/02/baciataubate/)
