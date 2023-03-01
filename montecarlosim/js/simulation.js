@@ -1,87 +1,86 @@
-const canvas = document.getElementById('canvas');
-const plotDiv = document.getElementById('plot');
+ const canvasWidth = 800;
+      const canvasHeight = 600;
+      const floorboardSpacing = 50;
+      const needleLength = 50;
+      const needleColor = "blue";
+      const intersectingNeedleColor = "red";
+      const floorboardColor = "black";
+      
+      let needlesTossed = 0;
+      let intersections = 0;
+      
+      function getRandomFloat(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+      
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      
+      function drawFloorboards(ctx) {
+        for (let y = floorboardSpacing / 2; y < canvasHeight; y += floorboardSpacing) {
+          ctx.beginPath();
+          ctx.moveTo(0, y);
+          ctx.lineTo(canvasWidth, y);
+          ctx.strokeStyle = floorboardColor;
+          ctx.stroke();
+        }
+      }
+      
+      function generateNeedle() {
+        const x1 = getRandomFloat(0, canvasWidth);
+        const y1 = getRandomFloat(0, canvasHeight);
+        const angle = getRandomFloat(0, Math.PI);
+        const x2 = x1 + needleLength * Math.cos(angle);
+        const y2 = y1 + needleLength * Math.sin(angle);
+        return [x1, y1, x2, y2];
+      }
+      
+      function checkIntersect(needle) {
+        const y = Math.floor(needle[1] / floorboardSpacing) * floorboardSpacing;
+        const intersects = needle[1] <= y + needleLength / 2 || needle[1] >= y + floorboardSpacing - needleLength / 2;
+        if (intersects) {
+          intersections++;
+        }
+        return intersects;
+      }
+      
+      function drawNeedle(ctx, needle, intersects) {
+        ctx.beginPath();
+        ctx.moveTo(needle[0], needle[1]);
+        ctx.lineTo(needle[2], needle[3]);
+        ctx.strokeStyle = intersects ? intersectingNeedleColor : needleColor;
+        ctx.stroke();
+      }
+      
+      function updateResults() {
+        needlesTossed++;
+        const piEstimate = (needlesTossed / intersections) || 0;
+        document.getElementById("needles-tossed").textContent = needlesTossed;
+        document.getElementById("intersections").textContent = intersections;
+        document.getElementById("pi-estimate").textContent = piEstimate.toFixed(6);
+      }
+      
+      function startSimulation()
 
-let needles = 1000;
-let needleLength = 0.5;
-let boardWidth = 1;
-let boards = 2;
+{
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-document.getElementById('start').addEventListener('click', startSimulation);
-
-function startSimulation() {
-  needles = document.getElementById('needles').value;
-  needleLength = document.getElementById('length').value;
-  boards = document.getElementById('boards').value;
-  clearCanvas();
-  plotDiv.innerHTML = '';
-  runSimulation();
-}
-
-function clearCanvas() {
-  const context = canvas.getContext('2d');
-  context.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-function runSimulation() {
-  let hits = 0;
-  for (let i = 0; i < needles; i++) {
-    const x1 = Math.random() * boards * boardWidth;
-    const y1 = Math.random() * canvas.height;
-    const angle = Math.random() * Math.PI;
-    const x2 = x1 + Math.cos(angle) * needleLength;
-    const y2 = y1 + Math.sin(angle) * needleLength;
-
-    if (x2 > boards * boardWidth || x2 < 0) {
-      hits++;
-      drawLine(x1, y1, x2, y2, true);
-    } else {
-      drawLine(x1, y1, x2, y2, false);
-    }
+// clear the canvas
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+    
+    // draw the floorboards
+    drawFloorboards(ctx);
+    
+    // generate and draw a needle
+    const needle = generateNeedle();
+    const intersects = checkIntersect(needle);
+    drawNeedle(ctx, needle, intersects);
+    
+    // update the results
+    updateResults();
   }
-
-  const piEstimate = (2 * needleLength * needles) / (boardWidth * hits);
-  plotResult(piEstimate);
-}
-
-function drawLine(x1, y1, x2, y2, hit) {
-  const context = canvas.getContext('2d');
-  context.beginPath();
-  context.moveTo(x1, y1);
-  context.lineTo(x2, y2);
-  if (hit) {
-    context.strokeStyle = 'red';
-  } else {
-    context.strokeStyle = 'black';
-  }
-  context.stroke();
-}
-
-function plotResult(piEstimate) {
-  const x = [boards];
-  const y = [piEstimate];
-  for (let i = 1; i <= boards; i++) {
-    x.push(i);
-    y.push(Math.PI);
-  }
-
-  const data = [
-    {
-      x: x,
-      y: y,
-      type: 'scatter',
-      mode: 'lines',
-      name: 'PI Estimate',
-    },
-  ];
-  const layout = {
-    title: 'PI Estimate vs Actual PI',
-    xaxis: {
-      title: 'Number of boards',
-      range: [0, boards + 1],
-    },
-    yaxis: {
-      title: 'PI Estimate',
-    },
-  };
-  Plotly.newPlot('plot', data, layout);
-}
+  
+  // add event listener to start the simulation on button click
+  document.getElementById("start-button").addEventListener("click", startSimulation);
