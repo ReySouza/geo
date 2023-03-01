@@ -11,8 +11,6 @@ redirect_from:
 {% include base_path %}
 {% capture written_label %}'None'{% endcapture %}
 
-<canvas id="canvas"></canvas>
-
 <h1>Welcome to the Buffon Needle Simulation!</h1>
 
 <p>Enter the number of needles, the length of the needles, and the number of floor boards to see the simulation in action.</p>
@@ -30,8 +28,10 @@ redirect_from:
     <label for="boards">Number of floor boards:</label>
     <input type="number" id="boards" name="boards" value="2">
   </div>
-  <button type="submit">Run simulation</button>
+  <button id="start">Start Simulation</button>
 </form>
+
+<canvas id="canvas"></canvas>
 
 <div id="plot"></div>
 
