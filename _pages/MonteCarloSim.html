@@ -9,46 +9,9 @@ redirect_from:
 
 {% include base_path %}
 
-<h1>Welcome to the Buffon Needle Simulation!</h1>
-
-<p>Enter the number of needles, the length of the needles, and the number of floor boards to see the simulation in action.</p>
-
-<form>
-  <div>
-    <label for="needles">Number of needles:</label>
-    <input type="number" id="needles" name="needles" value="1000">
-  </div>
-  <div>
-    <label for="length">Length of needles:</label>
-    <input type="number" id="length" name="length" value="0.5">
-  </div>
-  <div>
-    <label for="boards">Number of floor boards:</label>
-    <input type="number" id="boards" name="boards" value="2">
-  </div>
-  <button id="start">Start Simulation</button>
-</form>
-
-<canvas id="canvas"></canvas>
-
-<div id="plot"></div>
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-svg.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/plotly.js@latest/dist/plotly.min.js"></script>
-<script src="js/simulation.js"></script>
-
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$']],
-      displayMath: [['$$', '$$']],
-      processEscapes: true,
-      processEnvironments: true,
-      packages: ['base', 'newcommand', 'configMacros', 'tagged', 'autoload', 'noErrors']
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
+ <h1>Buffon's Needle Simulation</h1>
+    <p>Number of needles tossed: <span id="needles-tossed">0</span></p>
+    <p>Number of intersections: <span id="intersections">0</span></p>
+    <p>Estimate of pi: <span id="pi-estimate">0</span></p>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <button id="start-button">Start Simulation</button>
