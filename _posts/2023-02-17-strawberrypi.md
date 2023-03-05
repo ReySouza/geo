@@ -2,7 +2,7 @@
 title: Como podemos utilizar o método de Monte Carlo para determinar o valor de Pi
 published: 2023-02-01
 excerpt: "Comendo torta em um cassino italiano"
-permalink: /posts/2020/08/strawberrypi/ 
+permalink: /posts/2023/02/strawberrypi/ 
 ---
 
 # Problema da agulha de Buffon
@@ -230,3 +230,5 @@ Lançamento 8 - 3.189792 (3135 interseções)
 Lançamento 9 - 3.142677 (3182 interseções)
 Lançamento 10 - 3.15357 (3171 interseções)
 ```
+
+[Agora é sua vez](https://reysouza.github.io/geo//posts/2023/03/strawberrypisim/)
