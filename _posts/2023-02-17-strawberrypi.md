@@ -231,4 +231,4 @@ Lançamento 9 - 3.142677 (3182 interseções)
 Lançamento 10 - 3.15357 (3171 interseções)
 ```
 
-[Agora é sua vez](https://reysouza.github.io/geo//posts/2023/03/strawberrypisim/)
+[Agora é sua vez](https://reysouza.github.io/geo//posts/2023/03/strawberrysim/)
