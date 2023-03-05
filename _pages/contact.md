@@ -8,5 +8,7 @@ Oi! Minhas informações de contato estão abaixo incluindo email e algumas rede
 
 * E-mail Institucional: r251874@dac.unicamp.br
 * E-mail Particular: reynaldosrey2@gmail.com
-* Twitter: [Valkia](https://twitter.com/hip35793)
+* Twitter: [Nesossiligato](https://twitter.com/nesossiligato)
 * Instagram: [Rey](https://www.instagram.com/valkia6/)
+
+
