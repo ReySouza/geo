@@ -1,9 +1,16 @@
 ---
-title: Como podemos utilizar o método de Monte Carlo para determinar o valor de Pi
+title: Brincando com Monte Carlo
 published: 2023-02-01
-excerpt: "Comendo torta em um cassino italiano"
+excerpt: "O que seria de nós sem os estatísticos ?"
 permalink: /posts/2023/02/strawberrypi/ 
 ---
+
+# Introdução
+
+   O Método de Monte Carlo se baseia na utilização de processos estocásticos para modelagem de problemas físicos e matemáticos, estes processos tipicamente ocorrem por meio da utilização de algoritmos geradores de amostras de números randômicos ou pelo menos pseudorandômicos. O MC oferece abordagens númericas para problemas de natureza anisotrópica, isto é, que não podem ser medidos, estimados e abordados de forma experimental. O principal impedimento para o MC é o grande poder computacional exigido no processo de geração de milhões de números aleatórios.
+    O método utiliza distribuições estatísticas para gerar números aleatórios, estas distribuições são caracterizadas por funções de densidade de probabilidade (fdp) dentro de um intervalo específico, uma das funções mais utilizadas é a de distribuição uniforme, dada pela equação abaixo
+
+$$f(x) = \begin{cases} \frac{1}{b-a} & \text{para } x \in [a, b]\ 0 & \text{para } x \notin [a, b] \end{cases}$$
 
 # Problema da agulha de Buffon
 
