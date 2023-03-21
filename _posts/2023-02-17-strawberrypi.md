@@ -12,6 +12,11 @@ permalink: /posts/2023/02/strawberrypi/
 
 $$f(x) = \begin{cases} \frac{1}{b-a} & \text{para } x \in [a, b]\ 0 & \text{para } x \notin [a, b] \end{cases}$$
 
+# Estimando Pi
+
+   Um método clássico para estimar o valor de pi é utilizando o Método de Monte Carlo, é importante destacar que o MC é capaz de gerar apenas aproximações do valor inteiro da constante, isso ocorre pois pi é, em sua essência, um número irracional, um número que não pode ser descrito usando frações, então, a não ser que consigamos sortear um número infinito de pontos, nós nunca conseguiremos o valor inteiro de Pi, apenas algumas aproximações pontuais. Dito isso, suponha que temos um círculo de raio igual a 0.5, este círculo é envolto em um quadrado de 1x1.
+   
+
 # Problema da agulha de Buffon
 
 "Suponha que o piso de uma casa seja feito de tábuas de madeira paralelas, cada uma com o mesmo comprimento vertical e horizontal. Você então deixa cair uma agulha no chão, qual é a probabilidade de que esta agulha caia atravessando o vão entre duas tábuas ?"
