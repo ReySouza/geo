@@ -26,7 +26,7 @@ permalink: /posts/2023/02/strawberrypi/
    
   Dito isso, suponha que temos um círculo de raio igual a 0.5, este círculo é então envolto em um quadrado de dimensões 1x1.
    
-![Circle1](https://github.com/ReySouza/geo/blob/db605a8734a26db66b33e405681b4920aaad3192/Figure_1.png)
+![Circle1](https://raw.githubusercontent.com/ReySouza/geo/db605a8734a26db66b33e405681b4920aaad3192/Figure_1.png)
 
 Seguindo o método de Monte Carlo, podemos sortear uma série de pontos neste plano, cada ponto possuirá um conjunto de coordenadas (x,y) determinadas de forma randômica ou pelo menos pseudorrandômica utilizando números reais entre 0 e 1. Estes pontos estarão distribuidos de forma aleatória dentro do circulo e fora dele, a partir disso, podemos simplesmente obter a razão de pontos localizados dentro círculo pela quantidade total de pontos, ou seja, os pontos localizados dentro do quadrado.
 
@@ -46,15 +46,15 @@ Mas para quantidades finitas de pontos, teremos apenas aproximações de pi, ess
 
 Temos um círculo de raio igual a 0.5, envolto em um quadrado de dimensões 1x1, sortearemos 100 pontos, colorindo aqueles que estiverem contidos no círculo em vermelho e os que não estiverem contidos, em azul, após isso, iremos calcular a nossa aproximação de pi.
 
-![Circle2](https://github.com/ReySouza/geo/blob/09c1e0f3a01253d8a691ffb8512b023b9c793852/Figure_2.png)
+![Circle2](https://raw.githubusercontent.com/ReySouza/geo/master/Figure_2.png)
 
 Com apenas 100 sorteios, conseguimos aproximar o primeiro digito de pi, é esperado então que se aumentarmos a quantidade de pontos, nossa precisão irá aumentar consideravelmente, vemos isso sorteando 1000 pontos.
 
-![Circle3](https://github.com/ReySouza/geo/blob/8246c21eb32a14bb8f385821f6604719c63314b7/Figure_3.png)
+![Circle3](https://raw.githubusercontent.com/ReySouza/geo/master/Figure_3.png)
    
 Conseguimos aproximar até a primeira casa decimal de pi, um resultado que poderia ser apropriado em boa parte das situações, entretanto, podemos ir mais além, o limite para nossa simulação é simplesmente o poder de processamento do dispositivo que está executando a simulação. Com 1.000.000 de pontos temos.
 
-![Circle4](https://github.com/ReySouza/geo/blob/2ff6aabea42f686f6674462e99936ed35f400ec9/Figure_4.png).
+![Circle4](https://raw.githubusercontent.com/ReySouza/geo/master/Figure_4.png).
 
 É claro que essa não é a unica forma de determinar pi usando o método de monte carlo. Na verdade, este método é talvez o menos elegante de todos que podem ser usados, mas ele é consideravelmente mais didático que os demais. Vamos agora observar outro método mais complexo mas que gera resultados muito melhores e mais bonitos.
 
