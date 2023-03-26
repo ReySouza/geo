@@ -40,7 +40,7 @@ $$ 4\cdot \frac{\pi r^{2} }{4 r^{2}}=\pi $$
 
 Para uma quantidade infinita de pontos, a área do quadrado, e consequentemente do círculo, será preenchida de forma uniforme pelos pontos permitindo que a seguinte relação seja verdadeira
 
-$$4\cdot \frac{\mathbf{Quantidade \, de\, Pontos\, no \, Circulo}}{\textbf{Numero\, Total\, de\, Pontos}}=\pi $$
+$$4\cdot \frac{\mathbf{Quantidade \, de \, Pontos \, no \, Circulo}}{\textbf{Numero \, Total \, de \, Pontos}}=\pi $$
 
 Mas para quantidades finitas de pontos, teremos apenas aproximações de pi, essas aproximações serão cada vez melhores conforme utilizarmos mais pontos. Vamos demonstrar isso na prática.
 
