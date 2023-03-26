@@ -8,14 +8,55 @@ permalink: /posts/2023/02/strawberrypi/
 # Introdução
 
    O Método de Monte Carlo se baseia na utilização de processos estocásticos para modelagem de problemas físicos e matemáticos, estes processos tipicamente ocorrem por meio da utilização de algoritmos geradores de amostras de números randômicos ou pelo menos pseudorandômicos. O MC oferece abordagens númericas para problemas de natureza anisotrópica, isto é, que não podem ser medidos, estimados e abordados de forma experimental. O principal impedimento para o MC é o grande poder computacional exigido no processo de geração de milhões de números aleatórios.
-    O método utiliza distribuições estatísticas para gerar números aleatórios, estas distribuições são caracterizadas por funções de densidade de probabilidade (fdp) dentro de um intervalo específico, uma das funções mais utilizadas é a de distribuição uniforme, dada pela equação abaixo
-
-$$f(x) = \begin{cases} \frac{1}{b-a} & \text{para } x \in [a, b]\ 0 & \text{para } x \notin [a, b] \end{cases}$$
+    O método utiliza distribuições estatísticas para gerar números aleatórios, estas distribuições são caracterizadas por funções de densidade de probabilidade (fdp) dentro de um intervalo específico, essas funções são definidas por variáveis aleatórias contidas no conjunto dos números reais de forma que a função tenha a seguinte característica.
+    
+   $$f(x)\geq 0, \forall x \in \mathbb{R}$$
+   
+   $$\int_{-\infty }^{\infty }f(x)dx=1$$
+   
+   A função densidade de probabilidade é definida de forma que sempre que x assuma um valor entre o intervalo de x e x+dx, temos uma função de distribuição acumulada denotada por Fx
+   
+   $$F_{x}(x)=P(X\leq x)=\int_{-\infty }^{x}f(x)u\, du$$
+   
+   Essa é uma propriedade importante pois garante que qualquer distribuição estatística diferente possa utilizar o método de Monte Carlo sem desrespeitar a característica básica de sua fdp.
 
 # Estimando Pi
 
-   Um método clássico para estimar o valor de pi é utilizando o Método de Monte Carlo, é importante destacar que o MC é capaz de gerar apenas aproximações do valor inteiro da constante, isso ocorre pois pi é, em sua essência, um número irracional, um número que não pode ser descrito usando frações, então, a não ser que consigamos sortear um número infinito de pontos, nós nunca conseguiremos o valor inteiro de Pi, apenas algumas aproximações pontuais. Dito isso, suponha que temos um círculo de raio igual a 0.5, este círculo é envolto em um quadrado de 1x1.
+   Um método clássico para estimar o valor de pi é utilizando o Método de Monte Carlo, é importante destacar que o MC é capaz de gerar apenas aproximações do valor inteiro da constante, isso ocorre pois pi é, em sua essência, um número irracional, um número que não pode ser descrito usando frações, então, a não ser que consigamos sortear um número infinito de pontos, nós nunca conseguiremos o valor inteiro de Pi, apenas algumas aproximações pontuais.
    
+  Dito isso, suponha que temos um círculo de raio igual a 0.5, este círculo é então envolto em um quadrado de dimensões 1x1.
+   
+![Circle1](https://github.com/ReySouza/geo/blob/db605a8734a26db66b33e405681b4920aaad3192/Figure_1.png)
+
+Seguindo o método de Monte Carlo, podemos sortear uma série de pontos neste plano, cada ponto possuirá um conjunto de coordenadas (x,y) determinadas de forma randômica ou pelo menos pseudorrandômica utilizando números reais entre 0 e 1. Estes pontos estarão distribuidos de forma aleatória dentro do circulo e fora dele, a partir disso, podemos simplesmente obter a razão de pontos localizados dentro círculo pela quantidade total de pontos, ou seja, os pontos localizados dentro do quadrado.
+
+A área do círculo é dado por $$\pi r^{2}$$ enquanto a do quadrado pode ser escrita em termos do raio do círculo como $$4 r^{2}$$. A divisão entre essas duas áreas resultará em
+
+$$ \frac{\pi r^{2} }{4 r^{2}}=\frac{\pi }{4}$$
+
+Note que o resultado da divisão fornece apenas um quarto do valor desejado de pi, podemos solucionar isso simplesmente multiplicando a nossa divisão inicial por quatro
+
+$$ 4\cdot \frac{\pi r^{2} }{4 r^{2}}=\pi $$
+
+Para uma quantidade infinita de pontos, a área do quadrado, e consequentemente do círculo, será preenchida de forma uniforme pelos pontos permitindo que a seguinte relação seja verdadeira
+
+$$4\cdot \frac{\mathbf{Quantidade \, de\, Pontos\, no \, Circulo}}{\textbf{Numero\, Total\, de\, Pontos}}=\pi $$
+
+Mas para quantidades finitas de pontos, teremos apenas aproximações de pi, essas aproximações serão cada vez melhores conforme utilizarmos mais pontos. Vamos demonstrar isso na prática.
+
+Temos um círculo de raio igual a 0.5, envolto em um quadrado de dimensões 1x1, sortearemos 100 pontos, colorindo aqueles que estiverem contidos no círculo em vermelho e os que não estiverem contidos, em azul, após isso, iremos calcular a nossa aproximação de pi.
+
+![Circle2](https://github.com/ReySouza/geo/blob/09c1e0f3a01253d8a691ffb8512b023b9c793852/Figure_2.png)
+
+Com apenas 100 sorteios, conseguimos aproximar o primeiro digito de pi, é esperado então que se aumentarmos a quantidade de pontos, nossa precisão irá aumentar consideravelmente, vemos isso sorteando 1000 pontos.
+
+![Circle3](https://github.com/ReySouza/geo/blob/8246c21eb32a14bb8f385821f6604719c63314b7/Figure_3.png)
+   
+Conseguimos aproximar até a primeira casa decimal de pi, um resultado que poderia ser apropriado em boa parte das situações, entretanto, podemos ir mais além, o limite para nossa simulação é simplesmente o poder de processamento do dispositivo que está executando a simulação. Com 1.000.000 de pontos temos.
+
+![Circle4](https://github.com/ReySouza/geo/blob/2ff6aabea42f686f6674462e99936ed35f400ec9/Figure_4.png).
+
+É claro que essa não é a unica forma de determinar pi usando o método de monte carlo. Na verdade, este método é talvez o menos elegante de todos que podem ser usados, mas ele é consideravelmente mais didático que os demais. Vamos agora observar outro método mais complexo mas que gera resultados muito melhores e mais bonitos.
 
 # Problema da agulha de Buffon
 
