@@ -14,6 +14,7 @@ Olá! Eu sou o Reynaldo, eu sou um estudante de graduação de Geologia na Unive
 
 ## Minha Pesquisa
 Tenho um forte interesse na área do Sensoriamento Remoto, com ênfase nas Geotecnologias. Atualmente, minha pesquisa concentra-se nas aplicações de técnicas e princípios do Sensoriamento Remoto na indústria de óleo e gás. Além disso, meus interesses abrangem Astrogeologia, Petrologia, bem como as aplicações do Sensoriamento Remoto na mineração, preservação ambiental e geopatrimônio.
+
 Estes trabalhos podem ser explorados em detalhe maior na aba de [Pesquisa](https://reysouza.github.io/geo//pesquisa/) do site
 
 ## Meu Histórico
