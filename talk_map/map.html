@@ -118,6 +118,18 @@
     L.control.layers(baseMaps, overlayMaps).addTo(map);
     streetMap.addTo(map);
 
+    // Add event listeners for layer control checkboxes
+    document.querySelectorAll('.leaflet-control-layers-selector').forEach(function(checkbox) {
+      checkbox.addEventListener('change', function() {
+        var layerName = this.nextElementSibling.innerHTML;
+        if (this.checked) {
+          map.addLayer(overlayMaps[layerName]);
+        } else {
+          map.removeLayer(overlayMaps[layerName]);
+        }
+      });
+    });
+
   </script>
 </body>
 </html>
