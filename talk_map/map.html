@@ -27,7 +27,7 @@
     });
 
     var markers = [
-      // Marker data
+      
     ];
 
     var redIcon = L.icon({
@@ -67,7 +67,7 @@
 
     var markerLayerGroup = L.layerGroup();
 
-    // Function to add markers to the map based on color category
+    
     function addMarkersByColor(color) {
       markers.forEach(function(marker) {
         var icon;
@@ -90,7 +90,7 @@
       });
     }
 
-    // Function to clear all markers from the map
+    
     function clearMarkers() {
       markerLayerGroup.clearLayers();
     }
@@ -118,7 +118,7 @@
     L.control.layers(baseMaps, overlayMaps).addTo(map);
     streetMap.addTo(map);
 
-    // Add event listeners for layer control checkboxes
+    
     document.querySelectorAll('.leaflet-control-layers-selector').forEach(function(checkbox) {
       checkbox.addEventListener('change', function() {
         var layerName = this.nextElementSibling.innerHTML;
