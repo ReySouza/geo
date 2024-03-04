@@ -4,7 +4,8 @@ pesquisa educacional em Geociências "
 category: articles
 permalink: /articles/2023-12-09-modelo-geológico-taubaté/
 venue: "Terrae Didatica"
-excerpt: ''
+excerpt: 'A modelagem tridimensional de bacias sedimentares pode ser uma ferramenta notável no âmbito do ensino de Geociências, devido ao grande potencial educacional. A abordagem integra tecnologias avançadas de geoprocessamento, modelagem matemática e visualização 3D, culminando na criação de representações minuciosas e fidedignas das bacias sedimentares terrestres. As maquetes assim geradas devem difundir conhecimentos não apenas entre os cursos universitários de Geociências, mas devem também atingir e motivar docentes e alunos da educação básica para estudos nesse campo do conhecimento. 
+'
 date: 2023-12-09
 venue: 'Terrae Didatica'
 citation: 'Conclusão do Modelo Geológico
