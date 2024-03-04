@@ -27,72 +27,72 @@
     });
 
     var markers = [
-  {
-    lat: -14.2350,
-    lng: -51.9253,
-    title: "GE606 Marker 1",
-    date: "Random Date",
-    description: "Random Description",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    lat: -15.2350,
-    lng: -50.9253,
-    title: "GE606 Marker 2",
-    date: "Random Date",
-    description: "Random Description",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    lat: -13.2350,
-    lng: -52.9253,
-    title: "GE606 Marker 3",
-    date: "Random Date",
-    description: "Random Description",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    lat: -16.2350,
-    lng: -53.9253,
-    title: "GE606 Marker 4",
-    date: "Random Date",
-    description: "Random Description",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    lat: -14.5,
-    lng: -52.5,
-    title: "GN304 Marker 1",
-    date: "Random Date",
-    description: "Random Description",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    lat: -15,
-    lng: -52,
-    title: "GN304 Marker 2",
-    date: "Random Date",
-    description: "Random Description",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    lat: -14,
-    lng: -53,
-    title: "GN304 Marker 3",
-    date: "Random Date",
-    description: "Random Description",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    lat: -15.5,
-    lng: -53.5,
-    title: "GN304 Marker 4",
-    date: "Random Date",
-    description: "Random Description",
-    image: "https://via.placeholder.com/150",
-  },
+      {
+        lat: -14.2350,
+        lng: -51.9253,
+        title: "GE606 Marker 1",
+        date: "Random Date",
+        description: "Random Description",
+        image: "https://via.placeholder.com/150",
+      },
+      {
+        lat: -15.2350,
+        lng: -50.9253,
+        title: "GE606 Marker 2",
+        date: "Random Date",
+        description: "Random Description",
+        image: "https://via.placeholder.com/150",
+      },
+      {
+        lat: -13.2350,
+        lng: -52.9253,
+        title: "GE606 Marker 3",
+        date: "Random Date",
+        description: "Random Description",
+        image: "https://via.placeholder.com/150",
+      },
+      {
+        lat: -16.2350,
+        lng: -53.9253,
+        title: "GE606 Marker 4",
+        date: "Random Date",
+        description: "Random Description",
+        image: "https://via.placeholder.com/150",
+      },
+      {
+        lat: -14.5,
+        lng: -52.5,
+        title: "GN304 Marker 1",
+        date: "Random Date",
+        description: "Random Description",
+        image: "https://via.placeholder.com/150",
+      },
+      {
+        lat: -15,
+        lng: -52,
+        title: "GN304 Marker 2",
+        date: "Random Date",
+        description: "Random Description",
+        image: "https://via.placeholder.com/150",
+      },
+      {
+        lat: -14,
+        lng: -53,
+        title: "GN304 Marker 3",
+        date: "Random Date",
+        description: "Random Description",
+        image: "https://via.placeholder.com/150",
+      },
+      {
+        lat: -15.5,
+        lng: -53.5,
+        title: "GN304 Marker 4",
+        date: "Random Date",
+        description: "Random Description",
+        image: "https://via.placeholder.com/150",
+      },
+    ];
 
-];
     var redIcon = L.icon({
       iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
       iconSize: [25, 41],
@@ -107,63 +107,26 @@
       popupAnchor: [1, -34],
     });
 
-    var greenIcon = L.icon({
-      iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-    });
+    var markerLayerGroupGE606 = L.layerGroup();
+    var markerLayerGroupGN304 = L.layerGroup();
 
-    var violetIcon = L.icon({
-      iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-    });
-
-    var yellowIcon = L.icon({
-      iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-    });
-
-    var markerLayerGroup = L.layerGroup();
-
-    
-    function addMarkersByColor(color) {
+    function addMarkersByColor(markers, layerGroup, color) {
       markers.forEach(function(marker) {
         var icon;
         if (marker.title.includes("GE606")) {
           icon = redIcon;
         } else if (marker.title.includes("GN304")) {
           icon = blueIcon;
-        } else if (marker.title.includes("GF508")) {
-          icon = greenIcon;
-        } else if (marker.title.includes("GF303")) {
-          icon = yellowIcon;
-        } else {
-          icon = violetIcon; 
         }
-
         if (marker.title.includes(color)) {
-          L.marker([marker.lat, marker.lng], { icon: icon }).addTo(markerLayerGroup)
+          L.marker([marker.lat, marker.lng], { icon: icon }).addTo(layerGroup)
             .bindPopup("<h3>" + marker.title + "</h3><p>" + marker.date + "</p><p>" + marker.description + "</p><img src='" + marker.image + "' alt='Marker Image' width='200px'>");
         }
       });
     }
 
-    
-    function clearMarkers() {
-      markerLayerGroup.clearLayers();
-    }
-
-    // Add markers to the map initially
-    addMarkersByColor('GE606');
-    addMarkersByColor('GN304');
-    addMarkersByColor('GF508');
-    addMarkersByColor('GF303');
-    addMarkersByColor('Other');
+    addMarkersByColor(markers, markerLayerGroupGE606, 'GE606');
+    addMarkersByColor(markers, markerLayerGroupGN304, 'GN304');
 
     var baseMaps = {
       "Street Map": streetMap,
@@ -171,17 +134,13 @@
     };
 
     var overlayMaps = {
-      "<span style='color: red;'>GE606</span>": markerLayerGroup,
-      "<span style='color: blue;'>GN304</span>": markerLayerGroup,
-      "<span style='color: green;'>GF508</span>": markerLayerGroup,
-      "<span style='color: yellow;'>GF303</span>": markerLayerGroup,
-      "<span style='color: violet;'>Other</span>": markerLayerGroup,
+      "<span style='color: red;'>GE606</span>": markerLayerGroupGE606,
+      "<span style='color: blue;'>GN304</span>": markerLayerGroupGN304,
     };
 
     L.control.layers(baseMaps, overlayMaps).addTo(map);
     streetMap.addTo(map);
 
-    
     document.querySelectorAll('.leaflet-control-layers-selector').forEach(function(checkbox) {
       checkbox.addEventListener('change', function() {
         var layerName = this.nextElementSibling.innerHTML;
